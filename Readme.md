@@ -46,18 +46,18 @@ echo $VARNA_JAR
 ```
 
 The -f / --figures option will fail gracefully if VARNA_JAR is not set.
-VARNA figure generation (-f option) works best for RNAs up to ~200 nt
+VARNA figure generation (-f option) works best for RNAs up to ~200 nt.
 More information about VARNA:
-https://varna.lri.fr
+https://varna.lisn.upsaclay.fr
 
 ## Notes on environment
 The script was developed and tested on macOS with the following Python and library versions:
-Python  3.10.4
-numpy 2.2.6
-pandas 2.2.3
-matplotlib 3.9.2
-scipy 1.15.3 
-varnaapi 1.0.0
+- Python  3.10.4
+- numpy 2.2.6
+- pandas 2.2.3
+- matplotlib 3.9.2
+- scipy 1.15.3 
+- varnaapi 1.0.0
 
 Other operating systems are supported, provided that Java and VARNA are correctly installed
 Missing SHAPE reactivities must be encoded as -999
@@ -79,6 +79,7 @@ Missing SHAPE reactivities must be encoded as -999
 
 ## Input files
 
+Example input files can be found in the examples/input/ directory.
 - SHAPE reactivity files in `.map` format (4 columns):
   1. nucleotide index
   2. reactivity value (`-999` for missing data)
@@ -92,7 +93,7 @@ Missing SHAPE reactivities must be encoded as -999
 python shape_diff_weeks.py \
   -v examples/input/cond1.map \
   -c examples/input/cond2.map \
-  -d test.dot \
+  -d example/input/test.dot \
   -t first \
   -e second \
   -o -s -f
